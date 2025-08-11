@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -137,7 +136,7 @@
       <address>
         <strong>SalamanderApp</strong><br />
         Email: <a href="mailto:mirzak1993@gmail.com">mirzak1993@gmail.com</a><br />
-        Address: 31. jula, 141 [Add City, Country]
+        Address: 31. jula, 141, Sarajevo
       </address>
     </section>
 
