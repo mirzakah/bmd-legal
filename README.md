@@ -25,7 +25,7 @@
   <header>
     <h1>Privacy Policy for Balkanski Muslim Dating</h1>
     <div class="meta">
-      <div><strong>Effective Date:</strong> <span id="effective-date">[Enter Date, e.g., September 1, 2025]</span></div>
+      <div><strong>Effective Date:</strong> <span id="effective-date">eptember, 1, 2025</span></div>
       <div><strong>Version:</strong> 1.0</div>
     </div>
   </header>
