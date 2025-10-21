@@ -10,142 +10,180 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <a href="index.html" class="nav-link">
-            <img src="icon.png" alt="Together App Icon" class="logo" />
-            <h1>Together</h1>
-          </a>
+        <nav class="nav">
+          <div class="nav-left">
+            <a href="index.html" class="nav-link">
+              <img src="icon.png" alt="Together App Icon" class="logo" />
+              <h1>Together</h1>
+            </a>
+          </div>
+          <div class="nav-right">
+            <div class="lang-switch" role="group" aria-label="Language switcher">
+              <button id="btn-en" class="lang-btn active" data-locale="EN" aria-pressed="true">
+                <img src="assets/flags/en.png" alt="English" onerror="this.style.display='none'" />
+                <span>EN</span>
+              </button>
+              <button id="btn-bs" class="lang-btn" data-locale="BS" aria-pressed="false">
+                <img src="assets/flags/bs.png" alt="Bosanski" onerror="this.style.display='none'" />
+                <span>BS</span>
+              </button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <section class="policy">
-          <h2>Privacy Policy</h2>
-          <p><em>Last updated: September 4, 2025</em></p>
-
-          <p>
-            SalamanderApp ("us", "we", or "our") operates the Together mobile
-            application (the "Service").
-          </p>
-          <p>
-            This page informs you of our policies regarding the collection, use,
-            and disclosure of personal data when you use our Service and the
-            choices you have associated with that data. We use your data to
-            provide and improve the Service. By using the Service, you agree to
-            the collection and use of information in accordance with this
-            policy. Unless otherwise defined in this Privacy Policy, terms used
-            in this Privacy Policy have the same meanings as in our Terms and
-            Conditions.
-          </p>
-          <p>
-            <strong>Disclaimer:</strong> This is a template and not legal
-            advice. You should consult with a legal professional to ensure your
-            privacy policy is compliant with all applicable laws and
-            regulations.
-          </p>
-
-          <h3>Information Collection and Use</h3>
-          <p>
-            We collect several different types of information for various
-            purposes to provide and improve our Service to you.
-          </p>
-
-          <h3>Types of Data Collected</h3>
-          <h4>Personal Data</h4>
-          <p>
-            While using our Service, we may ask you to provide us with certain
-            personally identifiable information that can be used to contact or
-            identify you ("Personal Data"). Personally identifiable information
-            may include, but is not limited to:
-          </p>
-          <ul>
-            <li>Email address</li>
-            <li>First name and last name</li>
-            <li>Phone number</li>
-            <li>Usage Data</li>
-          </ul>
-
-          <h4>Usage Data</h4>
-          <p>
-            We may also collect information that your device sends whenever you
-            use our Service ("Usage Data"). This Usage Data may include
-            information such as your device's Internet Protocol address (e.g. IP
-            address), device type, device unique ID, the version of our Service
-            that you use, the time and date of your use, the time spent on those
-            pages, and other diagnostic data.
-          </p>
-
-          <h3>Use of Data</h3>
-          <p>SalamanderApp uses the collected data for various purposes:</p>
-          <ul>
-            <li>To provide and maintain the Service</li>
-            <li>To notify you about changes to our Service</li>
-            <li>
-              To allow you to participate in interactive features of our Service
-              when you choose to do so
-            </li>
-            <li>To provide customer care and support</li>
-            <li>
-              To provide analysis or valuable information so that we can improve
-              the Service
-            </li>
-            <li>To monitor the usage of the Service</li>
-            <li>To detect, prevent and address technical issues</li>
-          </ul>
-
-          <h3>Security of Data</h3>
-          <p>
-            The security of your data is important to us, but remember that no
-            method of transmission over the Internet, or method of electronic
-            storage is 100% secure. While we strive to use commercially
-            acceptable means to protect your Personal Data, we cannot guarantee
-            its absolute security.
-          </p>
-
-          <h3>Changes to This Privacy Policy</h3>
-          <p>
-            We may update our Privacy Policy from time to time. We will notify
-            you of any changes by posting the new Privacy Policy on this page.
-            You are advised to review this Privacy Policy periodically for any
-            changes. Changes to this Privacy Policy are effective when they are
-            posted on this page.
-          </p>
-
-          <h3>Contact Us</h3>
-          <p>
-            If you have any questions about this Privacy Policy, please contact
-            us:
-          </p>
-          <ul>
-            <li>
-              By email:
-              <a href="mailto:support@salamanderapp.org"
-                >support@salamanderapp.org</a
-              >
-            </li>
-          </ul>
-        </section>
+        <section class="policy" id="content"></section>
       </div>
     </main>
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 SalamanderApp. All rights reserved.</p>
-        <p>
+        <p id="footer-rights">&copy; 2025 SalamanderApp. All rights reserved.</p>
+        <p id="footer-contact">
           Contact us:
-          <a href="mailto:support@salamanderapp.org"
-            >support@salamanderapp.org</a
-          >
+          <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>
         </p>
         <p>
-          <a href="index.html">Home</a> |
-          <a href="terms-of-service.html">Terms of Service</a> |
-          <a href="child-safety-policy.html">Child Safety Policy</a> |
-          <a href="account-deletion.html">Account Deletion</a>
+          <a id="link-home" href="index.html">Home</a> |
+          <a id="link-terms" href="terms-of-service.html">Terms of Service</a> |
+          <a id="link-child" href="child-safety-policy.html">Child Safety Policy</a> |
+          <a id="link-delete" href="account-deletion.html">Account Deletion</a>
         </p>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        const html = document.documentElement;
+        const el = (id) => document.getElementById(id);
+        const content = el('content');
+        const i18n = {
+          EN: {
+            code: 'en',
+            title: 'Privacy Policy',
+            updated: 'Last updated: September 4, 2025',
+            rights: '\u00A9 2025 SalamanderApp. All rights reserved.',
+            contactPrefix: 'Contact us:',
+            links: { home: 'Home', terms: 'Terms of Service', child: 'Child Safety Policy', delete: 'Account Deletion' },
+            body: `
+              <h2>Privacy Policy</h2>
+              <p><em>Last updated: September 4, 2025</em></p>
+              <p>SalamanderApp ("us", "we", or "our") operates the Together mobile application (the "Service").</p>
+              <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.</p>
+              <p><strong>Disclaimer:</strong> This is a template and not legal advice. You should consult with a legal professional to ensure your privacy policy is compliant with all applicable laws and regulations.</p>
+              <h3>Information Collection and Use</h3>
+              <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+              <h3>Types of Data Collected</h3>
+              <h4>Personal Data</h4>
+              <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
+              <ul>
+                <li>Email address</li>
+                <li>First name and last name</li>
+                <li>Phone number</li>
+                <li>Usage Data</li>
+              </ul>
+              <h4>Usage Data</h4>
+              <p>We may also collect information that your device sends whenever you use our Service ("Usage Data"). This Usage Data may include information such as your device's IP address, device type, device unique ID, app version, timestamps, and diagnostic data.</p>
+              <h3>Use of Data</h3>
+              <p>SalamanderApp uses the collected data for various purposes:</p>
+              <ul>
+                <li>To provide and maintain the Service</li>
+                <li>To notify you about changes to our Service</li>
+                <li>To allow you to participate in interactive features when you choose</li>
+                <li>To provide customer care and support</li>
+                <li>To analyze and improve the Service</li>
+                <li>To monitor usage of the Service</li>
+                <li>To detect, prevent and address technical issues</li>
+              </ul>
+              <h3>Security of Data</h3>
+              <p>The security of your data is important to us, but no method of transmission or storage is 100% secure. We use commercially acceptable means to protect your Personal Data, but cannot guarantee absolute security.</p>
+              <h3>Changes to This Privacy Policy</h3>
+              <p>We may update our Privacy Policy from time to time. We will notify you by posting the new Privacy Policy on this page. Review this page periodically for changes.</p>
+              <h3>Contact Us</h3>
+              <p>If you have any questions about this Privacy Policy, please contact us by email: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
+            `
+          },
+          BS: {
+            code: 'bs',
+            title: 'Pravila privatnosti',
+            updated: 'Posljednje ažuriranje: 4. septembar 2025',
+            rights: '\u00A9 2025 SalamanderApp. Sva prava zadržana.',
+            contactPrefix: 'Kontakt:',
+            links: { home: 'Početna', terms: 'Uslovi korištenja', child: 'Politika sigurnosti djece', delete: 'Brisanje naloga' },
+            body: `
+              <h2>Pravila privatnosti</h2>
+              <p><em>Posljednje ažuriranje: 4. septembar 2025</em></p>
+              <p>SalamanderApp ("mi", "nas" ili "naš") upravlja mobilnom aplikacijom Together ("Usluga").</p>
+              <p>Ova stranica objašnjava naša pravila u vezi sa prikupljanjem, korištenjem i otkrivanjem ličnih podataka kada koristite našu Uslugu, kao i Vaše izbore u vezi s tim podacima. Vaše podatke koristimo da bismo pružili i unaprijedili Uslugu. Korištenjem Usluge, slažete se sa prikupljanjem i korištenjem informacija u skladu s ovom politikom. Ako nije drugačije definisano, pojmovi u ovim Pravilima privatnosti imaju isto značenje kao u našim Uslovima korištenja.</p>
+              <p><strong>Odricanje od odgovornosti:</strong> Ovo je predložak i ne predstavlja pravni savjet. Preporučujemo konsultacije s pravnim stručnjakom kako biste osigurali usklađenost s važećim zakonima i propisima.</p>
+              <h3>Prikupljanje i korištenje informacija</h3>
+              <p>Prikupljamo više vrsta podataka u različite svrhe kako bismo vam pružili i unaprijedili Uslugu.</p>
+              <h3>Vrste prikupljenih podataka</h3>
+              <h4>Lični podaci</h4>
+              <p>Tokom korištenja Usluge, možemo tražiti da nam dostavite određene informacije koje Vas mogu identifikovati ("Lični podaci"), kao što su:</p>
+              <ul>
+                <li>Email adresa</li>
+                <li>Ime i prezime</li>
+                <li>Broj telefona</li>
+                <li>Podaci o korištenju</li>
+              </ul>
+              <h4>Podaci o korištenju</h4>
+              <p>Možemo prikupljati i informacije koje Vaš uređaj šalje kada koristite Uslugu ("Podaci o korištenju") – IP adresu, tip uređaja, jedinstveni ID, verziju aplikacije, vremenske oznake i dijagnostičke podatke.</p>
+              <h3>Korištenje podataka</h3>
+              <p>SalamanderApp koristi prikupljene podatke za:</p>
+              <ul>
+                <li>Pružanje i održavanje Usluge</li>
+                <li>Obavještavanje o promjenama Usluge</li>
+                <li>Omogućavanje interaktivnih funkcija kada to odaberete</li>
+                <li>Korisničku podršku</li>
+                <li>Analizu i unapređenje Usluge</li>
+                <li>Nadzor korištenja Usluge</li>
+                <li>Otkrivanje, sprječavanje i rješavanje tehničkih problema</li>
+              </ul>
+              <h3>Sigurnost podataka</h3>
+              <p>Sigurnost Vaših podataka nam je važna, ali nijedna metoda prijenosa ili pohrane nije 100% sigurna. Primjenjujemo komercijalno prihvatljive mjere, ali ne možemo garantovati apsolutnu sigurnost.</p>
+              <h3>Izmjene Pravila privatnosti</h3>
+              <p>Ova Pravila privatnosti povremeno možemo ažurirati objavom nove verzije na ovoj stranici. Periodično ih pregledajte radi izmjena.</p>
+              <h3>Kontakt</h3>
+              <p>Za pitanja u vezi s ovim Pravilima privatnosti pišite nam na: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
+            `
+          }
+        };
+
+        function render(localeKey) {
+          const t = i18n[localeKey] || i18n.EN;
+          html.lang = t.code;
+          content.innerHTML = t.body;
+          document.title = `${t.title} - Together`;
+          // footer
+          el('footer-rights').innerHTML = `&copy; 2025 SalamanderApp. ${t.rights.replace(/^.*?\u00A9 2025 SalamanderApp\.\s*/, '')}`;
+          el('footer-contact').innerHTML = `${t.contactPrefix} <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>`;
+          el('link-home').textContent = t.links.home;
+          el('link-terms').textContent = t.links.terms;
+          el('link-child').textContent = t.links.child;
+          el('link-delete').textContent = t.links.delete;
+          // switcher UI state
+          document.getElementById('btn-en').classList.toggle('active', localeKey==='EN');
+          document.getElementById('btn-bs').classList.toggle('active', localeKey==='BS');
+          document.getElementById('btn-en').setAttribute('aria-pressed', String(localeKey==='EN'));
+          document.getElementById('btn-bs').setAttribute('aria-pressed', String(localeKey==='BS'));
+        }
+
+        function init() {
+          const saved = localStorage.getItem('locale') || 'EN';
+          render(saved);
+          document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-locale');
+            localStorage.setItem('locale', key);
+            render(key);
+          }));
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+      })();
+    </script>
   </body>
 </html>

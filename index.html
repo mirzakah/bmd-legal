@@ -1,43 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Together - Coming Soon</title>
-    <link rel="icon" href="icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav>
-                <img src="icon.png" alt="Together App Icon" class="logo">
-                <h1>Together</h1>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-left">
+            <img src="icon.png" alt="Together App Icon" class="logo" />
+            <h1>Zajedno</h1>
+          </div>
+          <div class="nav-right">
+            <div
+              class="lang-switch"
+              role="group"
+              aria-label="Language switcher"
+            >
+              <!-- Place flag images at assets/flags/en.png and assets/flags/bs.png -->
+              <button
+                id="btn-en"
+                class="lang-btn active"
+                data-locale="EN"
+                aria-pressed="true"
+              >
+                <img
+                  src="assets/flags/en.png"
+                  alt="English"
+                  onerror="this.style.display='none'"
+                />
+                <span>EN</span>
+              </button>
+              <button
+                id="btn-bs"
+                class="lang-btn"
+                data-locale="BS"
+                aria-pressed="false"
+              >
+                <img
+                  src="assets/flags/bs.png"
+                  alt="Bosanski"
+                  onerror="this.style.display='none'"
+                />
+                <span>BS</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
+    <!-- Animated background scene -->
+    <div class="scene" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="orb orb-4"></span>
+    </div>
+
     <main>
-        <div class="container hero">
-            <h2>Connecting People, One Moment at a Time.</h2>
-            <p class="subtitle">Our new application, <strong>Together</strong>, is launching soon. Get ready for a new way to share and connect.</p>
-            
-            <div class="coming-soon">
-                <h3>Download Now</h3>
-                <div class="stores">
-                    <a href="https://apps.apple.com/app/id6749869334" target="_blank" rel="noopener noreferrer" class="store-link"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.salamanderapp.muslim_dating_app" target="_blank" rel="noopener noreferrer" class="store-link"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play"></a>
-                </div>
-            </div>
+      <div class="container hero reveal">
+        <h2 id="hero-title">Connecting People, One Moment at a Time.</h2>
+        <p id="hero-subtitle" class="subtitle">
+          Our new application, <strong>Together</strong>, is launching soon. Get
+          ready for a new way to share and connect.
+        </p>
+
+        <div class="coming-soon reveal">
+          <h3 id="download-title">Download Now</h3>
+          <div class="stores">
+            <a
+              href="https://apps.apple.com/app/id6749869334"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="store-link"
+              ><img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+            /></a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.salamanderapp.muslim_dating_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="store-link"
+              ><img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+            /></a>
+          </div>
         </div>
+
+        <section class="faq-section reveal">
+          <h3 id="faq-title">FAQ</h3>
+          <p id="faq-subtitle" class="subtitle small">
+            Answers to common questions
+          </p>
+          <div
+            id="faq-accordion"
+            class="accordion"
+            role="region"
+            aria-labelledby="faq-title"
+          ></div>
+        </section>
+      </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 SalamanderApp. All rights reserved.</p>
-            <p>Contact us: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
-            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a> | <a href="child-safety-policy.html">Child Safety Policy</a> | <a href="account-deletion.html">Account Deletion</a></p>
-        </div>
+      <div class="container">
+        <p id="footer-rights">
+          &copy; 2025 SalamanderApp. All rights reserved.
+        </p>
+        <p id="footer-contact">
+          Contact us:
+          <a href="mailto:support@salamanderapp.org"
+            >support@salamanderapp.org</a
+          >
+        </p>
+        <p>
+          <a id="link-privacy" href="privacy-policy.html">Privacy Policy</a> |
+          <a id="link-terms" href="terms-of-service.html">Terms of Service</a> |
+          <a id="link-child" href="child-safety-policy.html"
+            >Child Safety Policy</a
+          >
+          |
+          <a id="link-delete" href="account-deletion.html">Account Deletion</a>
+        </p>
+      </div>
     </footer>
-</body>
+
+    <script>
+      (function () {
+        const el = (id) => document.getElementById(id);
+        const html = document.documentElement;
+
+        const i18n = {
+          EN: {
+            code: "en",
+            heroTitle: "Connecting People, One Moment at a Time.",
+            heroSubtitle:
+              "Our new application, <strong>Together</strong>, is launching soon. Get ready for a new way to share and connect.",
+            downloadTitle: "Download Now",
+            faqTitle: "FAQ",
+            faqSubtitle: "Answers to common questions",
+            rights: "\u00A9 2025 SalamanderApp. All rights reserved.",
+            contactPrefix: "Contact us:",
+            links: {
+              privacy: "Privacy Policy",
+              terms: "Terms of Service",
+              child: "Child Safety Policy",
+              delete: "Account Deletion",
+            },
+            faqItems: [
+              {
+                q: "How do I create a profile?",
+                a: "Register via email or Google/Apple account, then fill in your info, upload photos and set preferences.",
+              },
+              {
+                q: "How does the recommendation/matching work?",
+                a: "Based on your preferences (age, location, values/interests) we suggest compatible profiles. More complete profiles yield better results.",
+              },
+              {
+                q: "What are Super Likes and how to use them?",
+                a: "A stronger positive signal that highlights you to the other person. Daily quota applies.",
+              },
+              {
+                q: "How does photo blurring (Blur) work and how to enable it?",
+                a: "If you want more privacy, you can blur your photos: • Enable it in Settings > Privacy > ‘Blur My Photos’. • Your photos will appear blurred to others in discovery and on your profile. • You can allow an individual to view your photos from their profile menu. • This feature exists to increase privacy and control — you decide who and when can see your photos.",
+              },
+              {
+                q: "How can I increase profile views?",
+                a: "Use Boost, upload quality photos, keep your profile updated and stay active in chats.",
+              },
+              {
+                q: "How do I report inappropriate content?",
+                a: "Use the Report option on a profile or conversation. Our team reviews within 24h.",
+              },
+              {
+                q: "How does Premium work?",
+                a: "Premium unlocks: more Super Likes, Boost, advanced filters, priority support and more.",
+              },
+              {
+                q: "Can I change my location?",
+                a: "Yes. Change it in profile settings. Premium includes a ‘Travel’ mode for temporary changes.",
+              },
+              {
+                q: "Why can’t I see all photos?",
+                a: "Some photos are being verified or limited by guidelines, or the user restricted visibility.",
+              },
+              {
+                q: "How do I delete my account?",
+                a: "Go to Settings > Privacy & Security > Delete account. This is permanent and cannot be undone.",
+              },
+              {
+                q: "Can I undo an accidental swipe?",
+                a: "Premium users can use ‘Rewind’ to restore the last swipe.",
+              },
+              {
+                q: "How do I remove a match?",
+                a: "Delete the conversation with that person. It removes the match and the chat history.",
+              },
+            ],
+          },
+          BS: {
+            code: "bs",
+            heroTitle: "Povezujemo ljude, trenutak po trenutak.",
+            heroSubtitle:
+              "Naša nova aplikacija, <strong>Zajedno</strong>, uskoro dolazi. Spremite se za novi način dijeljenja i povezivanja.",
+            downloadTitle: "Preuzmite sada",
+            faqTitle: "FAQ",
+            faqSubtitle: "Odgovori na česta pitanja",
+            rights: "\u00A9 2025 SalamanderApp. Sva prava zadržana.",
+            contactPrefix: "Kontakt:",
+            links: {
+              privacy: "Pravila privatnosti",
+              terms: "Uslovi korištenja",
+              child: "Politika sigurnosti djece",
+              delete: "Brisanje naloga",
+            },
+            faqItems: [
+              {
+                q: "Kako kreirati profil?",
+                a: "Registrujte se putem e‑pošte ili Google/Apple naloga, zatim unesite podatke, postavite fotografije i podesite preferencije.",
+              },
+              {
+                q: "Kako funkcioniše preporuka/podudaranje?",
+                a: "Na osnovu vaših preferencija (godine, lokacija, vrijednosti/interesi) predlažemo kompatibilne profile. Potpuniji profili daju bolje rezultate.",
+              },
+              {
+                q: "Šta su Super Lajkovi i kako ih koristiti?",
+                a: "Jači pozitivan signal koji vas ističe drugoj osobi. Dnevna kvota važi.",
+              },
+              {
+                q: "Kako radi zamućivanje fotografija (Blur) i kako ga uključiti?",
+                a: "Ako želite više privatnosti, možete zamutiti svoje fotografije: • Uključite u Postavke > Privatnost > “Zamuti moje fotografije”. • Vaše fotografije će se drugima prikazivati zamućene u otkrivanju i na vašem profilu. • Pojedinačno možete dozvoliti osobi da vidi vaše fotografije iz njenog menija na profilu. • Ova funkcija postoji radi veće privatnosti i kontrole — vi odlučujete ko i kada vidi vaše fotografije.",
+              },
+              {
+                q: "Kako povećati broj pregleda profila?",
+                a: "Koristite Boost, postavite kvalitetne fotografije, redovno ažurirajte profil i budite aktivni u chatovima.",
+              },
+              {
+                q: "Kako prijaviti neprimjeren sadržaj?",
+                a: "Koristite opciju Prijavi na profilu ili u razgovoru. Naš tim odgovara u roku od 24h.",
+              },
+              {
+                q: "Kako radi Premium?",
+                a: "Premium otključava: više Super Lajkova, Boost, napredne filtere, prioritetnu podršku i još toga.",
+              },
+              {
+                q: "Mogu li promijeniti lokaciju?",
+                a: "Da. Promijenite u postavkama profila. Premium uključuje “Putni” režim za privremene promjene.",
+              },
+              {
+                q: "Zašto ne vidim sve fotografije?",
+                a: "Neke fotografije se verifikuju ili su ograničene pravilima, ili je korisnik ograničio vidljivost.",
+              },
+              {
+                q: "Kako obrisati nalog?",
+                a: "Idite na Postavke > Privatnost i sigurnost > Brisanje naloga. Ovo je trajno i ne može se poništiti.",
+              },
+              {
+                q: "Mogu li poništiti slučajan swipe?",
+                a: "Premium korisnici mogu koristiti “Vraćanje” (Rewind) da vrate posljednji swipe.",
+              },
+              {
+                q: "Kako ukloniti match?",
+                a: "Obrišite razgovor s tom osobom. To uklanja match i historiju chata.",
+              },
+            ],
+          },
+        };
+
+        function buildAccordion(items) {
+          const container = el("faq-accordion");
+          container.innerHTML = "";
+          items.forEach((item, idx) => {
+            const itemId = `faq-item-${idx}`;
+            const panelId = `faq-panel-${idx}`;
+            const wrapper = document.createElement("div");
+            wrapper.className = "accordion-item";
+
+            const btn = document.createElement("button");
+            btn.className = "accordion-header";
+            btn.setAttribute("aria-expanded", "false");
+            btn.setAttribute("aria-controls", panelId);
+            btn.id = itemId;
+            btn.innerHTML = `<span>${item.q}</span><span class="icon" aria-hidden="true"></span>`;
+
+            const panel = document.createElement("div");
+            panel.className = "accordion-panel";
+            panel.id = panelId;
+            panel.setAttribute("role", "region");
+            panel.setAttribute("aria-labelledby", itemId);
+            panel.innerText = item.a;
+
+            btn.addEventListener("click", () => {
+              const expanded = btn.getAttribute("aria-expanded") === "true";
+              document
+                .querySelectorAll(".accordion-header")
+                .forEach((b) => b.setAttribute("aria-expanded", "false"));
+              document
+                .querySelectorAll(".accordion-panel")
+                .forEach((p) => (p.style.maxHeight = null));
+              if (!expanded) {
+                btn.setAttribute("aria-expanded", "true");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+            });
+
+            wrapper.appendChild(btn);
+            wrapper.appendChild(panel);
+            container.appendChild(wrapper);
+          });
+        }
+
+        // Enhanced accordion with smoother open/close and full heights
+        function buildAccordion2(items) {
+          const container = el("faq-accordion");
+          container.innerHTML = "";
+          items.forEach((item, idx) => {
+            const itemId = `faq-item-${idx}`;
+            const panelId = `faq-panel-${idx}`;
+            const wrapper = document.createElement("div");
+            wrapper.className = "accordion-item";
+
+            const btn = document.createElement("button");
+            btn.className = "accordion-header";
+            btn.setAttribute("aria-expanded", "false");
+            btn.setAttribute("aria-controls", panelId);
+            btn.id = itemId;
+            btn.innerHTML = `
+              <span class="q">${item.q}</span>
+              <span class="chev" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>`;
+
+            const panel = document.createElement("div");
+            panel.className = "accordion-panel";
+            panel.id = panelId;
+            panel.setAttribute("role", "region");
+            panel.setAttribute("aria-labelledby", itemId);
+            const inner = document.createElement("div");
+            inner.className = "accordion-content";
+            inner.textContent = item.a;
+            panel.appendChild(inner);
+
+            panel.addEventListener("transitionend", (e) => {
+              if (e.propertyName !== "max-height") return;
+              if (panel.classList.contains("open")) {
+                panel.style.maxHeight = "none";
+              } else {
+                panel.style.maxHeight = "";
+              }
+            });
+
+            btn.addEventListener("click", () => {
+              const expanded = btn.getAttribute("aria-expanded") === "true";
+              // Close others smoothly
+              document.querySelectorAll(".accordion-item").forEach((itemEl) => {
+                const header = itemEl.querySelector(".accordion-header");
+                const p = itemEl.querySelector(".accordion-panel");
+                if (!p) return;
+                if (itemEl !== wrapper || expanded) {
+                  header && header.setAttribute("aria-expanded", "false");
+                  itemEl.classList.remove("open");
+                  p.classList.remove("open");
+                  const cs = getComputedStyle(p).maxHeight;
+                  if (cs === "none") {
+                    p.style.maxHeight = p.scrollHeight + "px";
+                  }
+                  requestAnimationFrame(() => {
+                    p.style.maxHeight = "0px";
+                  });
+                }
+              });
+
+              // Open clicked one
+              if (!expanded) {
+                btn.setAttribute("aria-expanded", "true");
+                wrapper.classList.add("open");
+                panel.classList.add("open");
+                panel.style.maxHeight = "0px";
+                requestAnimationFrame(() => {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                });
+              }
+            });
+
+            wrapper.appendChild(btn);
+            wrapper.appendChild(panel);
+            container.appendChild(wrapper);
+          });
+        }
+
+        function applyLocale(localeKey) {
+          const dict = i18n[localeKey] || i18n.EN;
+          html.lang = dict.code;
+          el("btn-en").classList.toggle("active", localeKey === "EN");
+          el("btn-bs").classList.toggle("active", localeKey === "BS");
+          el("btn-en").setAttribute("aria-pressed", String(localeKey === "EN"));
+          el("btn-bs").setAttribute("aria-pressed", String(localeKey === "BS"));
+
+          el("hero-title").innerHTML = dict.heroTitle;
+          el("hero-subtitle").innerHTML = dict.heroSubtitle;
+          el("download-title").textContent = dict.downloadTitle;
+          el("faq-title").textContent = dict.faqTitle;
+          el("faq-subtitle").textContent = dict.faqSubtitle;
+          el(
+            "footer-rights"
+          ).innerHTML = `&copy; 2025 SalamanderApp. ${dict.rights.replace(
+            /^.*?\u00A9 2025 SalamanderApp\.\s*/,
+            ""
+          )}`;
+          el(
+            "footer-contact"
+          ).innerHTML = `${dict.contactPrefix} <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>`;
+          el("link-privacy").textContent = dict.links.privacy;
+          el("link-terms").textContent = dict.links.terms;
+          el("link-child").textContent = dict.links.child;
+          el("link-delete").textContent = dict.links.delete;
+
+          buildAccordion2(dict.faqItems);
+        }
+
+        function init() {
+          const saved = localStorage.getItem("locale") || "EN";
+          applyLocale(saved);
+          document.querySelectorAll(".lang-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const key = btn.getAttribute("data-locale");
+              localStorage.setItem("locale", key);
+              applyLocale(key);
+            });
+          });
+          // Expand first FAQ item by default for better onboarding
+          setTimeout(() => {
+            const firstHeader = document.querySelector(".accordion-header");
+            if (firstHeader) firstHeader.click();
+          }, 50);
+
+          // Header shadow on scroll
+          const headerEl = document.querySelector("header");
+          const onScroll = () => {
+            if (window.scrollY > 4) headerEl.classList.add("scrolled");
+            else headerEl.classList.remove("scrolled");
+          };
+          onScroll();
+          window.addEventListener("scroll", onScroll, { passive: true });
+
+          // Reveal on scroll animations
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((e) => {
+                if (e.isIntersecting) e.target.classList.add("show");
+              });
+            },
+            { threshold: 0.15 }
+          );
+          document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+          // Parallax for background orbs
+          const orbs = Array.from(document.querySelectorAll(".orb"));
+          window.addEventListener(
+            "mousemove",
+            (e) => {
+              const cx = window.innerWidth / 2;
+              const cy = window.innerHeight / 2;
+              const dx = (e.clientX - cx) / cx;
+              const dy = (e.clientY - cy) / cy;
+              orbs.forEach((o, i) => {
+                const depth = (i + 1) * 6;
+                o.style.transform = `translate3d(${dx * depth}px, ${
+                  dy * depth
+                }px, 0)`;
+              });
+            },
+            { passive: true }
+          );
+        }
+
+        document.addEventListener("DOMContentLoaded", init);
+      })();
+    </script>
+  </body>
 </html>

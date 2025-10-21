@@ -10,128 +10,127 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <a href="index.html" class="nav-link">
-            <img src="icon.png" alt="Together App Icon" class="logo" />
-            <h1>Together</h1>
-          </a>
+        <nav class="nav">
+          <div class="nav-left">
+            <a href="index.html" class="nav-link">
+              <img src="icon.png" alt="Together App Icon" class="logo" />
+              <h1>Together</h1>
+            </a>
+          </div>
+          <div class="nav-right">
+            <div class="lang-switch" role="group" aria-label="Language switcher">
+              <button id="btn-en" class="lang-btn active" data-locale="EN" aria-pressed="true">
+                <img src="assets/flags/en.png" alt="English" onerror="this.style.display='none'" />
+                <span>EN</span>
+              </button>
+              <button id="btn-bs" class="lang-btn" data-locale="BS" aria-pressed="false">
+                <img src="assets/flags/bs.png" alt="Bosanski" onerror="this.style.display='none'" />
+                <span>BS</span>
+              </button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <section class="policy">
-          <h2>Zajedno: Child Safety & Protection Policy</h2>
-          <p><em>Last Updated: October 11, 2025</em></p>
-
-          <h3>1. Our Unwavering Commitment to Child Safety</h3>
-          <p>
-            At Zajedno (Balkanski Muslim Dating), our mission is to provide a safe, Halal-compliant, and culturally sensitive platform for Balkan Muslims to find a marital partner. The safety and well-being of our community, and the broader online community, are of paramount importance.
-          </p>
-          <p>
-            We have a <strong>zero-tolerance policy</strong> towards any form of Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM). We unequivocally condemn and strictly prohibit any activity on our platform that involves, promotes, or facilitates the abuse or exploitation of children. This policy outlines the standards and measures we have in place to protect children and maintain a safe environment for all our users.
-          </p>
-
-          <h3>2. Definitions</h3>
-          <p>
-            <strong>Child Sexual Abuse and Exploitation (CSAE):</strong> Any act or activity involving the sexual abuse or exploitation of a minor. This includes, but is not limited to, grooming, coercion, and any sexual communication with a minor.
-          </p>
-          <p>
-            <strong>Child Sexual Abuse Material (CSAM):</strong> Any visual depiction (such as a photograph, video, or digital image) that shows a minor engaged in sexually explicit conduct.
-          </p>
-
-          <h3>3. Prohibited Conduct</h3>
-          <p>
-            The following activities are strictly forbidden on the Zajedno platform and will result in immediate and permanent termination of the user's account:
-          </p>
-          <ul>
-            <li>Creating, uploading, sharing, or soliciting CSAM.</li>
-            <li>Engaging in any conversation or behavior aimed at grooming or sexually exploiting a minor.</li>
-            <li>Impersonating a minor or attempting to contact individuals believed to be minors for sexual purposes.</li>
-            <li>Sharing links to external websites or platforms containing CSAE or CSAM.</li>
-            <li>Any other behavior that violates child safety laws or puts a minor at risk.</li>
-          </ul>
-
-          <h3>4. Our Safety Measures: Prevention and Detection</h3>
-          <p>
-            We employ a multi-layered approach to prevent and detect CSAE on our platform:
-          </p>
-          <ul>
-            <li>
-              <strong>Proactive Content Moderation:</strong> We utilize advanced automated systems, including technologies like Amazon Rekognition, to proactively scan user-uploaded content (such as profile photos) for nudity and other policy-violating material. This helps us detect and remove inappropriate content before it becomes widely visible.
-            </li>
-            <li>
-              <strong>In-App User Reporting Tools:</strong> We empower our users to be our partners in safety. Our application provides clear and easily accessible tools for users to report any profile, message, or content they believe to be suspicious, inappropriate, or in violation of our child safety standards. Every report is reviewed by our safety team.
-            </li>
-            <li>
-              <strong>Account Verification:</strong> We have implemented account verification measures to help ensure the authenticity of profiles on our platform, adding a layer of security and trust.
-            </li>
-            <li>
-              <strong>Account Audits:</strong> We conduct regular reviews of accounts that have been flagged for suspicious activity.
-            </li>
-          </ul>
-
-          <h3>5. Reporting Process and Enforcement</h3>
-          <p>
-            <strong>How to Report:</strong> Users can report a safety concern directly through a user's profile within the app. We encourage our users to report any suspicious behavior immediately.
-          </p>
-          <p>
-            <strong>Our Review Process:</strong> Upon receiving a report, our dedicated safety team will conduct a thorough review of the reported content and the user's activity. We treat all reports related to child safety with the highest priority.
-          </p>
-          <p>
-            <strong>Consequences:</strong> Any user found to be in violation of this Child Safety Policy will be immediately and permanently banned from the Zajedno platform. We do not offer second chances for such offenses.
-          </p>
-
-          <h3>6. Cooperation with Law Enforcement</h3>
-          <p>
-            Zajedno is fully committed to cooperating with national and international law enforcement agencies to combat CSAE.
-          </p>
-          <ul>
-            <li>We will report all credible instances of CSAM to the relevant national authorities in accordance with applicable laws (e.g., local and regional police cybercrime units).</li>
-            <li>Where applicable, we will also report CSAM to organizations such as the National Center for Missing & Exploited Children (NCMEC).</li>
-            <li>We will preserve evidence related to CSAE and provide it to law enforcement upon receipt of a valid legal process.</li>
-          </ul>
-
-          <h3>7. Resources for Help</h3>
-          <p>
-            If you or someone you know is a victim of child abuse or exploitation, help is available. Please contact your local authorities immediately. You can also find support from the following organizations:
-          </p>
-          <ul>
-            <li>INHOPE: International Association of Internet Hotlines - <a href="https://www.inhope.org" target="_blank" rel="noopener noreferrer">www.inhope.org</a></li>
-            <li>Brave Phone (Hrabri Telefon), Croatia: <a href="https://www.hrabritelefon.hr" target="_blank" rel="noopener noreferrer">www.hrabritelefon.hr</a></li>
-            <li>Plavi Telefon, Bosnia and Herzegovina: <a href="https://www.plavitelefon.ba" target="_blank" rel="noopener noreferrer">www.plavitelefon.ba</a></li>
-            <li>Your local police department.</li>
-          </ul>
-
-          <h3>8. Contact Us</h3>
-          <p>
-            For any questions related to our safety standards and practices, please contact our designated point of contact for safety compliance at:
-          </p>
-          <ul>
-            <li>
-              By email:
-              <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>
-            </li>
-          </ul>
-        </section>
+        <section class="policy" id="content"></section>
       </div>
     </main>
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 SalamanderApp. All rights reserved.</p>
+        <p id="footer-rights">&copy; 2025 SalamanderApp. All rights reserved.</p>
+        <p id="footer-contact">Contact us: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
         <p>
-          Contact us:
-          <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>
-        </p>
-        <p>
-          <a href="index.html">Home</a> |
-          <a href="privacy-policy.html">Privacy Policy</a> |
-          <a href="terms-of-service.html">Terms of Service</a> |
-          <a href="account-deletion.html">Account Deletion</a>
+          <a id="link-home" href="index.html">Home</a> |
+          <a id="link-privacy" href="privacy-policy.html">Privacy Policy</a> |
+          <a id="link-terms" href="terms-of-service.html">Terms of Service</a> |
+          <a id="link-delete" href="account-deletion.html">Account Deletion</a>
         </p>
       </div>
     </footer>
+
+    <script>
+      (function(){
+        const html = document.documentElement;
+        const el = (id)=>document.getElementById(id);
+        const content = el('content');
+        const i18n = {
+          EN: { code:'en', rights:'\u00A9 2025 SalamanderApp. All rights reserved.', contactPrefix:'Contact us:', links:{home:'Home', privacy:'Privacy Policy', terms:'Terms of Service', delete:'Account Deletion'}, body:`
+            <h2>Together: Child Safety & Protection Policy</h2>
+            <p><em>Last Updated: October 11, 2025</em></p>
+            <h3>1. Our Unwavering Commitment to Child Safety</h3>
+            <p>At Together (Balkan Muslim Dating), our mission is to provide a safe, Halal-compliant, and culturally sensitive platform. The safety and well-being of our community is paramount.</p>
+            <p>We have a <strong>zero-tolerance policy</strong> towards any form of Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM). We strictly prohibit any activity that involves, promotes, or facilitates the abuse or exploitation of children.</p>
+            <h3>2. Definitions</h3>
+            <p><strong>CSAE:</strong> Any act involving sexual abuse or exploitation of a minor, including grooming, coercion, or sexual communication with a minor.</p>
+            <p><strong>CSAM:</strong> Any visual depiction that shows a minor engaged in sexually explicit conduct.</p>
+            <h3>3. Prohibited Conduct</h3>
+            <p>Strictly forbidden activities (lead to immediate permanent ban):</p>
+            <ul><li>Creating, uploading, sharing, or soliciting CSAM</li><li>Grooming or attempting sexual exploitation of a minor</li><li>Impersonating a minor or contacting perceived minors for sexual purposes</li><li>Sharing links to CSAE/CSAM</li><li>Any behavior violating child safety laws or risking a minor</li></ul>
+            <h3>4. Safety Measures: Prevention and Detection</h3>
+            <ul><li><strong>Proactive Moderation:</strong> Automated tools (e.g., image screening) and human review for policy-violating content</li><li><strong>In‑App Reporting:</strong> Clear tools to report suspicious content/behavior</li><li><strong>Account Verification:</strong> Measures to improve authenticity and trust</li><li><strong>Account Audits:</strong> Regular reviews of flagged accounts</li></ul>
+            <h3>5. Reporting and Enforcement</h3>
+            <p><strong>How to report:</strong> Use the in‑app report on profile or chat. Report immediately.</p>
+            <p><strong>Review process:</strong> Our safety team prioritizes child safety reports and performs thorough reviews.</p>
+            <p><strong>Consequences:</strong> Immediate and permanent ban for violations. No second chances.</p>
+            <h3>6. Cooperation with Law Enforcement</h3>
+            <ul><li>Report credible CSAM to relevant national authorities</li><li>Where applicable, report to organizations like NCMEC</li><li>Preserve and provide evidence upon valid legal process</li></ul>
+            <h3>7. Resources for Help</h3>
+            <ul><li>INHOPE: <a href="https://www.inhope.org" target="_blank" rel="noopener noreferrer">www.inhope.org</a></li><li>Hrabri Telefon (Croatia): <a href="https://www.hrabritelefon.hr" target="_blank" rel="noopener noreferrer">www.hrabritelefon.hr</a></li><li>Plavi Telefon (BiH): <a href="https://www.plavitelefon.ba" target="_blank" rel="noopener noreferrer">www.plavitelefon.ba</a></li><li>Your local police</li></ul>
+            <h3>8. Contact Us</h3>
+            <p>Email: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
+          `},
+          BS: { code:'bs', rights:'\u00A9 2025 SalamanderApp. Sva prava zadržana.', contactPrefix:'Kontakt:', links:{home:'Početna', privacy:'Pravila privatnosti', terms:'Uslovi korištenja', delete:'Brisanje naloga'}, body:`
+            <h2>Zajedno: Politika zaštite djece</h2>
+            <p><em>Posljednje ažuriranje: 11. oktobar 2025</em></p>
+            <h3>1. Naša nepokolebljiva posvećenost sigurnosti djece</h3>
+            <p>U Zajedno (Balkanski Muslim Dating) cilj nam je sigurna, halal‑usklađena i kulturno osjetljiva platforma. Sigurnost zajednice nam je prioritet.</p>
+            <p>Imamo <strong>politiku nulte tolerancije</strong> prema bilo kojem obliku seksualnog zlostavljanja i eksploatacije djece (CSAE) i materijala seksualnog zlostavljanja djece (CSAM). Strogo zabranjujemo aktivnosti koje uključuju, promovišu ili olakšavaju zlostavljanje djece.</p>
+            <h3>2. Definicije</h3>
+            <p><strong>CSAE:</strong> Svaka radnja koja uključuje seksualno zlostavljanje ili eksploataciju maloljetnika, uključujući grooming, prisilu ili seksualnu komunikaciju.</p>
+            <p><strong>CSAM:</strong> Svaki vizuelni prikaz maloljetnika u seksualno eksplicitnom kontekstu.</p>
+            <h3>3. Zabranjeno ponašanje</h3>
+            <p>Strogo zabranjeno (dovodi do trajne zabrane):</p>
+            <ul><li>Kreiranje, učitavanje, dijeljenje ili traženje CSAM-a</li><li>Grooming ili pokušaj seksualne eksploatacije maloljetnika</li><li>Lažno predstavljanje kao maloljetnik ili kontaktiranje navodnih maloljetnika u seksualne svrhe</li><li>Dijeljenje linkova ka CSAE/CSAM</li><li>Bilo kakvo ponašanje protivno zakonima zaštite djece</li></ul>
+            <h3>4. Sigurnosne mjere: prevencija i detekcija</h3>
+            <ul><li><strong>Proaktivna moderacija:</strong> Automatizovani alati (npr. provjera slika) i ručna kontrola</li><li><strong>Prijave u aplikaciji:</strong> Jasni alati za prijavu sumnjivog sadržaja/ponašanja</li><li><strong>Verifikacija naloga:</strong> Mjere autentičnosti i povjerenja</li><li><strong>Revizije naloga:</strong> Redovne provjere prijavljenih naloga</li></ul>
+            <h3>5. Prijava i provedba</h3>
+            <p><strong>Kako prijaviti:</strong> U profilu ili chatu koristite opciju Prijavi. Prijavite odmah.</p>
+            <p><strong>Pregled:</strong> Tim za sigurnost prioritetno obrađuje prijave koje se tiču djece.</p>
+            <p><strong>Posljedice:</strong> Trenutna i trajna zabrana naloga. Nema drugog pokušaja.</p>
+            <h3>6. Saradnja s vlastima</h3>
+            <ul><li>Prijavljujemo vjerodostojne slučajeve CSAM nadležnim organima</li><li>Po potrebi prijavljujemo NCMEC-u ili sličnim organizacijama</li><li>Čuvamo i dostavljamo dokaze na osnovu valjanog pravnog zahtjeva</li></ul>
+            <h3>7. Resursi za pomoć</h3>
+            <ul><li>INHOPE: <a href="https://www.inhope.org" target="_blank" rel="noopener noreferrer">www.inhope.org</a></li><li>Hrabri Telefon (Hrvatska): <a href="https://www.hrabritelefon.hr" target="_blank" rel="noopener noreferrer">www.hrabritelefon.hr</a></li><li>Plavi Telefon (BiH): <a href="https://www.plavitelefon.ba" target="_blank" rel="noopener noreferrer">www.plavitelefon.ba</a></li><li>Vaša lokalna policija</li></ul>
+            <h3>8. Kontakt</h3>
+            <p>Email: <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a></p>
+          `}
+        };
+        function render(localeKey){
+          const t = i18n[localeKey] || i18n.EN;
+          html.lang = t.code;
+          content.innerHTML = t.body;
+          el('footer-rights').innerHTML = `&copy; 2025 SalamanderApp. ${t.rights.replace(/^.*?\u00A9 2025 SalamanderApp\.\s*/, '')}`;
+          el('footer-contact').innerHTML = `${t.contactPrefix} <a href=\"mailto:support@salamanderapp.org\">support@salamanderapp.org</a>`;
+          el('link-home').textContent = t.links.home;
+          el('link-privacy').textContent = t.links.privacy;
+          el('link-terms').textContent = t.links.terms;
+          el('link-delete').textContent = t.links.delete;
+          document.getElementById('btn-en').classList.toggle('active', localeKey==='EN');
+          document.getElementById('btn-bs').classList.toggle('active', localeKey==='BS');
+          document.getElementById('btn-en').setAttribute('aria-pressed', String(localeKey==='EN'));
+          document.getElementById('btn-bs').setAttribute('aria-pressed', String(localeKey==='BS'));
+        }
+        function init(){
+          const saved = localStorage.getItem('locale') || 'EN';
+          render(saved);
+          document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.getAttribute('data-locale');localStorage.setItem('locale',key);render(key);}));
+        }
+        document.addEventListener('DOMContentLoaded', init);
+      })();
+    </script>
   </body>
 </html>
