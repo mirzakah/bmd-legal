@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="description" content="RelayHome public account deletion request page." />
+    <title>Account Deletion - RelayHome</title>
+    <link rel="icon" href="assets/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="relayhome.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="RelayHome account deletion pages">
+          <a class="brand" href="./">
+            <img src="assets/app-icon.png" alt="RelayHome app icon" />
+            <span>
+              <strong>RelayHome</strong>
+              <span>Account Deletion</span>
+            </span>
+          </a>
+          <div class="nav-links">
+            <a href="./">Overview</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="legal">
+        <h1>RelayHome account deletion</h1>
+        <p class="updated">Last updated: June 11, 2026</p>
+
+        <p>
+          You can request deletion of your RelayHome account and associated
+          personal data inside the RelayHome app:
+        </p>
+        <ol>
+          <li>Open RelayHome.</li>
+          <li>Go to Account or Settings.</li>
+          <li>Open Privacy &amp; Security.</li>
+          <li>Choose Request account deletion or Delete account.</li>
+        </ol>
+
+        <p>
+          In the current app, open Settings -> Privacy &amp; Security -> Request
+          account deletion. We are adding Account -> Delete account as a shorter
+          path.
+        </p>
+
+        <p>
+          If you cannot access the app, submit a deletion request from this page
+          using the same email address you used for RelayHome.
+        </p>
+
+        <form
+          class="form-grid"
+          action="mailto:support@salamanderapp.org"
+          method="post"
+          enctype="text/plain"
+        >
+          <label>
+            Email address used for RelayHome account
+            <input name="relayhome_account_email" type="email" required />
+          </label>
+          <label>
+            Confirm email address
+            <input name="relayhome_confirm_email" type="email" required />
+          </label>
+          <label>
+            Household name, optional
+            <input name="household_name" type="text" />
+          </label>
+          <label>
+            User ID, optional
+            <input name="user_id" type="text" />
+          </label>
+          <label>
+            Reason, optional
+            <textarea name="reason" rows="4"></textarea>
+          </label>
+          <label class="check-row">
+            <input name="confirmation" type="checkbox" required />
+            <span>
+              I understand this requests deletion of my RelayHome account and
+              associated personal data.
+            </span>
+          </label>
+          <button class="button primary" type="submit">Submit deletion request</button>
+        </form>
+
+        <div class="notice">
+          <p>
+            If the form does not open your email client, send the same
+            information directly to
+            <a href="mailto:support@salamanderapp.org">support@salamanderapp.org</a>
+            with the subject "RelayHome account deletion".
+          </p>
+        </div>
+
+        <h2>How deletion works</h2>
+        <p>
+          RelayHome will verify account ownership before processing deletion. We
+          aim to process verified deletion requests within 30 days.
+        </p>
+
+        <h2>Deletion may remove or anonymize</h2>
+        <ul>
+          <li>Account profile.</li>
+          <li>Household membership.</li>
+          <li>Device push tokens.</li>
+          <li>Personal identifiers tied to tasks and routines where possible.</li>
+          <li>Subscription linkage where applicable.</li>
+        </ul>
+
+        <h2>Some records may be retained</h2>
+        <p>
+          We may retain limited records when required for security, fraud
+          prevention, legal, tax, billing, dispute resolution, or audit integrity
+          of household events.
+        </p>
+
+        <p>
+          For more details, read the
+          <a href="privacy.html">RelayHome Privacy Policy</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>RelayHome<br />Copyright 2026 Mirza Kahrovic. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+          <a href="account-deletion.html">Account deletion</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
