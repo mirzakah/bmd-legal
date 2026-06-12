@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="description" content="FotoFazon public account deletion request page." />
+    <title>Account Deletion - FotoFazon</title>
+    <link rel="stylesheet" href="fotofazon.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="FotoFazon account deletion pages">
+          <a class="brand" href="./">
+            <span class="brand-mark" aria-hidden="true">FF</span>
+            <span>
+              <strong>FotoFazon</strong>
+              <span>Account Deletion</span>
+            </span>
+          </a>
+          <div class="nav-links">
+            <a href="./">Overview</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="legal">
+        <h1>FotoFazon account deletion</h1>
+        <p class="updated">Last updated: June 12, 2026</p>
+
+        <p>
+          You can request deletion of your FotoFazon account and associated
+          personal data inside the FotoFazon app when the account settings
+          screen is available:
+        </p>
+        <ol>
+          <li>Open FotoFazon.</li>
+          <li>Go to Account or Settings.</li>
+          <li>Open Privacy, Data, or Account Controls.</li>
+          <li>Choose Request account deletion or Delete account.</li>
+        </ol>
+
+        <p>
+          If you cannot access the app, submit a deletion request from this page
+          using the same email address you used for FotoFazon.
+        </p>
+
+        <form
+          class="form-grid"
+          action="mailto:support@fotofazon.app"
+          method="post"
+          enctype="text/plain"
+        >
+          <label>
+            Email address used for FotoFazon account
+            <input name="fotofazon_account_email" type="email" required />
+          </label>
+          <label>
+            Confirm email address
+            <input name="fotofazon_confirm_email" type="email" required />
+          </label>
+          <label>
+            Firebase user ID, optional
+            <input name="firebase_user_id" type="text" />
+          </label>
+          <label>
+            RevenueCat app user ID, optional
+            <input name="revenuecat_app_user_id" type="text" />
+          </label>
+          <label>
+            Reason, optional
+            <textarea name="reason" rows="4"></textarea>
+          </label>
+          <label class="check-row">
+            <input name="confirmation" type="checkbox" required />
+            <span>
+              I understand this requests deletion of my FotoFazon account,
+              profile data, uploaded content where possible, push tokens, and
+              associated personal data.
+            </span>
+          </label>
+          <button class="button primary" type="submit">Submit deletion request</button>
+        </form>
+
+        <div class="notice">
+          <p>
+            If the form does not open your email client, send the same
+            information directly to
+            <a href="mailto:support@fotofazon.app">support@fotofazon.app</a>
+            with the subject "FotoFazon account deletion".
+          </p>
+        </div>
+
+        <h2>How deletion works</h2>
+        <p>
+          FotoFazon will verify account ownership before processing deletion. We
+          aim to process verified deletion requests within 30 days.
+        </p>
+
+        <h2>Deletion may remove or anonymize</h2>
+        <ul>
+          <li>Firebase account profile and authentication identifiers.</li>
+          <li>Uploaded photos and challenge entries where deletion is technically and legally available.</li>
+          <li>Votes, rankings, reports, moderation records, and comments tied to the account where possible.</li>
+          <li>Device push tokens and notification preferences.</li>
+          <li>RevenueCat app user linkage and entitlement association where applicable.</li>
+        </ul>
+
+        <h2>Some records may be retained</h2>
+        <p>
+          We may retain limited records when required for security, fraud
+          prevention, legal, tax, billing, refund, dispute resolution,
+          moderation, abuse prevention, or audit integrity of challenges and
+          purchases.
+        </p>
+
+        <p>
+          For more details, read the
+          <a href="privacy.html">FotoFazon Privacy Policy</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>FotoFazon<br />Copyright 2026 Mirza Kahrovic. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+          <a href="account-deletion.html">Account deletion</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
