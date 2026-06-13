@@ -32,23 +32,23 @@
     <main class="container">
       <article class="legal">
         <h1>FotoFazon account deletion</h1>
-        <p class="updated">Last updated: June 12, 2026</p>
+        <p class="updated">Last updated: June 13, 2026</p>
 
         <p>
           You can request deletion of your FotoFazon account and associated
-          personal data inside the FotoFazon app when the account settings
-          screen is available:
+          personal data inside the FotoFazon app:
         </p>
         <ol>
           <li>Open FotoFazon.</li>
-          <li>Go to Account or Settings.</li>
-          <li>Open Privacy, Data, or Account Controls.</li>
-          <li>Choose Request account deletion or Delete account.</li>
+          <li>Go to Profile &gt; Settings &gt; Delete account.</li>
+          <li>Review the deletion notice and confirm the request.</li>
         </ol>
 
         <p>
           If you cannot access the app, submit a deletion request from this page
-          using the same email address you used for FotoFazon.
+          using an account identifier we can verify. If you signed in with email
+          or a social login, include that login identifier. If you used an
+          anonymous account, include your Firebase UID or public handle.
         </p>
 
         <form
@@ -58,16 +58,29 @@
           enctype="text/plain"
         >
           <label>
-            Email address used for FotoFazon account
-            <input name="fotofazon_account_email" type="email" required />
+            Account identifier
+            <input
+              name="fotofazon_account_identifier"
+              type="text"
+              required
+              placeholder="Email, social login, Firebase UID, or public handle"
+            />
           </label>
           <label>
-            Confirm email address
-            <input name="fotofazon_confirm_email" type="email" required />
+            Contact email for confirmation
+            <input name="contact_email" type="email" required />
           </label>
           <label>
-            Firebase user ID, optional
+            Confirm contact email
+            <input name="confirm_contact_email" type="email" required />
+          </label>
+          <label>
+            Firebase UID, optional if already provided above
             <input name="firebase_user_id" type="text" />
+          </label>
+          <label>
+            Public handle, optional if already provided above
+            <input name="public_handle" type="text" />
           </label>
           <label>
             RevenueCat app user ID, optional
@@ -93,7 +106,9 @@
             If the form does not open your email client, send the same
             information directly to
             <a href="mailto:support@fotofazon.app">support@fotofazon.app</a>
-            with the subject "FotoFazon account deletion".
+            with the subject "FotoFazon account deletion". Include your account
+            identifier, contact email, and whether the account uses email,
+            social login, or anonymous Firebase sign-in.
           </p>
         </div>
 
@@ -106,18 +121,27 @@
         <h2>Deletion may remove or anonymize</h2>
         <ul>
           <li>Firebase account profile and authentication identifiers.</li>
-          <li>Uploaded photos and challenge entries where deletion is technically and legally available.</li>
-          <li>Votes, rankings, reports, moderation records, and comments tied to the account where possible.</li>
+          <li>Uploaded photos and challenge entries associated with the account.</li>
+          <li>Votes, rankings, comments, reports, and public handles tied to the account where possible.</li>
           <li>Device push tokens and notification preferences.</li>
           <li>RevenueCat app user linkage and entitlement association where applicable.</li>
+          <li>Support messages connected to the deletion request, unless retention is required.</li>
         </ul>
 
         <h2>Some records may be retained</h2>
         <p>
           We may retain limited records when required for security, fraud
-          prevention, legal, tax, billing, refund, dispute resolution,
-          moderation, abuse prevention, or audit integrity of challenges and
-          purchases.
+          prevention, purchase verification, tax or accounting obligations,
+          legal compliance, refunds, dispute resolution, moderation and abuse
+          prevention, or audit integrity of challenges and purchases.
+        </p>
+
+        <h2>Subscriptions and store billing</h2>
+        <p>
+          Deleting a FotoFazon account does not cancel subscriptions or billing
+          managed by Apple App Store or Google Play. If you have an active
+          FotoFazon Plus subscription, cancel it separately in your App Store or
+          Google Play account settings.
         </p>
 
         <p>
